@@ -1,4 +1,4 @@
 = 授業でのGithub Classroom の使い方
 
-. link:./SoftEng/README.md[ソフトウェア工学概論]
+. link:./SoftEng/README.adoc[ソフトウェア工学概論]
 

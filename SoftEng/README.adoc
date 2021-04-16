@@ -1,8 +1,12 @@
+:toc:
+
 = ソフトウェア工学概論
 
 ソフトウェア工学概論で GitHub Classroom に課題を提出する方法です。
 
-:toc:
+* ❗ `前準備` 、`1. Github Classroom（課題提出場所）の準備`、`2. 課題提出場所（リポジトリ）への課題提出（初回）` は、初回だけ行います。❗ 
+* その後は、`3. 提出物の更新` のみ行えばOKです。
+* Git/GitHub の使い方は、第1回目の予習課題にしてあるので、わからない部分はそちらを参照してください。
 
 == 前準備
 
@@ -16,7 +20,7 @@ image::./img/fig01.png[title=プロジェクトを閉じる]
 すでに自分の Github リポジトリで課題のファイルを管理している場合は、プロジェクトフォルダの中の `.git` フォルダを削除してください。 +
 （もしくは、自分のリポジトリからzipファイルをダウンロードして、展開したものを次の手順から使っても良いです。）
 
-== 1. Github Classroom のURL発行
+== 1. Github Classroom（課題提出場所）の準備
 
 授業の課題ページで *GitHub Classroom のURL を指定しておくので、ブラウザでアクセス* してから、以下の操作をしてください。
 
@@ -63,15 +67,73 @@ image::./img/fig07.png[title=ブラウザでのアクセス]
 
 `code` ボタンを押し、clone用のURLをコピーします。
 
-image::./img/fig07.png[title=URLのコピー]
+image::./img/fig08.png[title=URLのコピー]
 
 === 2-3. git clone
 
 あなたのPCの、課題を置いておきたいフォルダの中で、課題提出場所のリポジトリを `clone` します。 +
-（Windows の場合：Git Bash, macOS の場合：ターミナル、Linux の場合：端末）
+（Windows の場合：Git Bash, macOS の場合：ターミナル、Linux の場合：端末 でコマンドを実行）
 
 [source, sh]
 ----
-git clone https://github.com/cist-programming-courses/xxxxxx.git #<1>
+git clone https://github.com/cist-programming-courses/xxxxxx.git    #<1>
 ----
 <1> xxxxxx の部分はそれぞれ異なる。
+
+
+=== 2-4. 課題で作成したプロジェクトの追加
+
+2-3 で作成したフォルダの中に、授業の課題で作成したプロジェクトを移動する。
+
+image::./img/fig09.png[title=git cloneで作成したフォルダの中に、課題のフォルダを移動]
+
+
+=== 2-5. 課題で作成したプロジェクトの提出
+
+2-4 で追加した課題のプロジェクトを、Github Classroom に提出する。
+
+git clone したフォルダで、次のコマンドを実行する。
+
+[source, sh]
+----
+git add .
+----
+
+[source, sh]
+----
+git commit -av
+----
+
+コミットログは、 `第1回の課題提出` とする。
+
+[source, sh]
+----
+git push
+----
+
+=== 2-6. 提出されているかの確認
+
+`2-1.ブラウザで開く` をもう一度行い、課題のフォルダが提出（push）されていることを確認する。
+
+
+== 3. 提出物の更新
+
+課題を修正した時や、2回目以降の課題の内容を提出する場合は、提出物を更新してください。
+
+
+[source, sh]
+----
+git add .
+----
+
+[source, sh]
+----
+git commit -av
+----
+
+コミットログは、 提出する内容についての説明を書いてください。
+
+[source, sh]
+----
+git push
+----

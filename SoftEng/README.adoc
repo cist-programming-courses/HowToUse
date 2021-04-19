@@ -106,10 +106,8 @@ git add .
 
 [source, sh]
 ----
-git commit -av
+git commit -m "第1回の課題提出"
 ----
-
-コミットログは、 `第1回の課題提出` としてください。
 
 [source, sh]
 ----
@@ -150,8 +148,9 @@ git add .
 
 [source, sh]
 ----
-git commit -av
+git commit -m "XXXXXX"    #<1>
 ----
+<1> "XXXXXX" の部分は更新内容を他者に伝える様に書く。
 
 コミットログは、 提出する内容についての説明を書いてください。
 
